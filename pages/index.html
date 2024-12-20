@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/dist/style.css">
+</head>
+<body>
+
+    <!-- ============================================================ HEADER ============================================================ -->
+
+    <header class="sticky top-0 z-[99] header w-full bg-White">
+        <div class="container-fluid">
+            <div class="flex items-center justify-between py-16">
+                <div>
+                    <a href="#">
+                        <img src="../assets/images/png/logo.png" class="lgscreen:w-[90%] mdscreen:w-[75%]" alt="">
+                    </a>
+                </div>
+                <nav class="mdscreen:hidden pr-[110px] lgscreen:pr-0">
+                    <ul class="flex gap-[16px] lgscreen:gap-[14px]">
+                        <li class="nav-link"><a href="#">Home</a></li>
+                        <li class="nav-link"><a href="#">About us</a></li>
+                        <li class="nav-link"><a href="#">Our services</a></li>
+                        <li class="nav-link"><a href="#">Contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="hidden mdscreen:flex open-button">
+                    <img src="../assets/images/svg/hamburger-menu.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================ SIDEBAR ============================================================ -->
+
+    <aside class="sidebar h-screen fixed top-0 -right-full backdrop-blur-[35px] w-full hidden mdscreen:flex z-[999]">
+        <div class="container-fluid py-20 w-full">
+            <div class="w-full flex justify-end py-18 close-btn">
+                <img src="../assets/images/svg/close.svg" alt="">
+            </div>
+            <ul class="flex flex-col h-full justify-center items-center gap-6">
+                <li class="nav-link"><a href="#">Home</a></li>
+                <li class="nav-link"><a href="#">About us</a></li>
+                <li class="nav-link"><a href="#">Our services</a></li>
+                <li class="nav-link"><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    
+    <main class="bg-semiwhite">
+
+        <!-- ============================================================ HERO_SECTION ============================================================ -->
+
+        <section class="hero-section h-full mdscreen:h-auto z-40">
+            <div class="absolute bottom-[22px] left-50per mdscreen:hidden">
+                <img src="../assets/images/svg/mouse-icon.svg" alt="">
+            </div>
+            <div class="banner-content flex w-full h-full items-center mdscreen:flex-col-reverse relative gap-4 container-fluid lg:pr-0">
+                <div class="left-section w-6/12 mdscreen:w-full mdscreen:py-40 smscreen:py-30">
+                    <div class="flex flex-col justify-center w-full h-full">
+                        <div class="content-box">
+                             <div class="title-primary title-semiblack max-w-[610px] font-700">
+                                <h1>Complete Health Care Solutions for Everyone</h1>
+                             </div>
+                             <div class="content big max-w-[640px] mt-40 mdscreen:mt-20 content-gray">
+                                <p>We're always available for our Patients with emergen problems.
+                                    You can easily reach us 24/7. We focused on highest quality.</p>
+                             </div>
+                        </div>
+                        <div class="mt-90 xlscreen:mt-60 lgscreen:mt-40 smscreen:flex 576screen:justify-center">
+                            <a href="#" class="btn-primary btn-green w-fit">
+                                Make Appointment
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right section w-6/12 mdscreen:w-full">
+                   <div class="flex w-full h-full justify-end banner-right-section">
+                        <div class="doctor-img flex w-full h-full justify-end mdscreen:justify-center items-end">
+                            <img src="../assets/images/png/doctor.png" class="object-cover 2xlscreen:w-[90%] xlscreen:w-auto lgscreen:object-contain mdscreen:w-1/2 576screen:w-auto" alt="">
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ WHO WE ARE SECTION ============================================================ -->
+        
+        <section class="whoweare-section py-100 lgscreen:py-70 mdscreen:py-40 smscreen:py-30">
+           <div class="container-fluid">
+                <div class="zigzag-content w-full flex mdscreen:flex-col gap-[40px]">
+                    <div class="left-section w-5/12 mdscreen:w-full">
+                        <div class="video-section w-full h-full relative z-40">
+                            <video id="video" 
+                                src="../assets/video/dummy-video.mp4"
+                                poster="../assets/images/png/doctor-kit.png"
+                                class="w-full h-full object-cover overflow-hidden" 
+                                loop></video>
+                            <div id="overlay" 
+                                class="absolute inset-0 bg-black/50 opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div class="top-50per absolute translate-y-minus_50 left-50per translate-x-minus_50 cursor-pointer" id="playPauseButton">
+                                <img id="playPauseIcon" 
+                                    src="../assets/images/png/play-btn.png" 
+                                    alt="Play Button">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="right-section w-7/12 mdscreen:w-full">
+                        <div class="pre-heading">
+                            <span>Who we are?</span>
+                        </div>
+                        <div class="title-primary title-semiblack font-600 max-w-[567px] mt-16">
+                            <h2 class="h1">Short story about Medifine</h2>
+                        </div>
+                        <div class="content big content-gray mt-16">
+                            <p>Medifine is an online healthcare provider, Offering health solutions
+                                and advice to over 30,00,000 patients across  Bangladesh.</p>
+                            <p class="!mt-[32px] mdscreen:!mt-20">With a team of licensed doctors and pharmasists, Medifine aim to
+                                provide comprihensive medical consultation services for patients
+                                and doctors alike.</p>
+                            <div class="mt-80 mdscreen:mt-40 smscreen:mt-30">
+                                <a href="#" class="anchor-link gap-[10px]">
+                                    Know more
+                                    <span>
+                                        <img src="../assets/images/svg/arrow.svg" alt="">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </section>
+        
+        <!-- ============================================================ SERVICE SECTION ============================================================ -->
+
+        <section class="service-section pb-100 lgscreen:pb-70 mdscreen:pb-40 smscreen:pb-30">
+            <div class="container-fluid">
+                <div class="pre-heading flex justify-center">
+                    <span>Our Services</span>
+                </div>
+                <div class="title-primary title-semiblack mt-16 text-center max-w-[908px] mx-auto font-700">
+                    <h2 class="h1">We Offer Different Services 
+                        To Improve Your Health</h2>
+                </div>
+                <div class="divider"></div>
+                <div class="grid grid-cols-4 lgscreen:grid-cols-3 mdscreen:grid-cols-2 xsscreen:grid-cols-1 gap-[20px]">
+                    <div class="service-card">
+                        <div class="icon">
+                            <img src="../assets/images/svg/expert-doctor.svg" alt="">
+                        </div>
+                        <div class="title-primary title-semiblack font-700 mt-20">
+                            <h5>Expert Doctor</h5>
+                        </div>
+                        <div class="content big content-gray mt-16">
+                            <p>We have a team of expert
+                                specialist doctor.</p>
+                        </div>
+                        <div class="overlay-card">
+                            <div class="title-primary title-semiblack font-700">
+                                <h5>Expert Doctor</h5>
+                            </div>
+                            <div class="content big content-white mt-16">
+                                <p>We have a team of expert
+                                    specialist doctor.</p>
+                            </div>
+                            <div class="mt-30">
+                                <a href="#" class="btn-secondary btn-white">
+                                    Appointment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <img src="../assets/images/svg/diagnosis.svg" alt="">
+                        </div>
+                        <div class="title-primary title-semiblack font-700 mt-20">
+                            <h5>Diagnosis</h5>
+                        </div>
+                        <div class="content big content-gray mt-16">
+                            <p>Best medical equipment
+                                used to diagnosis.</p>
+                        </div>
+                        <div class="overlay-card">
+                            <div class="title-primary title-semiblack font-700">
+                                <h5>Diagnosis</h5>
+                            </div>
+                            <div class="content big content-white mt-16">
+                                <p>Best medical equipment
+                                    used to diagnosis.</p>
+                            </div>
+                            <div class="mt-30">
+                                <a href="#" class="btn-secondary btn-white">
+                                    Appointment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <img src="../assets/images/svg/pathology.svg" alt="">
+                        </div>
+                        <div class="title-primary title-semiblack font-700 mt-20">
+                            <h5>Pathology</h5>
+                        </div>
+                        <div class="content big content-gray mt-16">
+                            <p> Highly specialized MD 
+                                or DO physician.</p>
+                        </div>
+                        <div class="overlay-card">
+                            <div class="title-primary title-semiblack font-700">
+                                <h5>Pathology</h5>
+                            </div>
+                            <div class="content big content-white mt-16">
+                                <p>Best medical equipment
+                                    used to diagnosis.</p>
+                            </div>
+                            <div class="mt-30">
+                                <a href="#" class="btn-secondary btn-white">
+                                    Appointment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <img src="../assets/images/svg/dentist.svg" alt="">
+                        </div>
+                        <div class="title-primary title-semiblack font-700 mt-20">
+                            <h5>Dentel care</h5>
+                        </div>
+                        <div class="content big content-gray mt-16">
+                            <p>Maintain the overall 
+                                health of your mouth.</p>
+                        </div>
+                        <div class="overlay-card">
+                            <div class="title-primary title-semiblack font-700">
+                                <h5>Dentel care</h5>
+                            </div>
+                            <div class="content big content-white mt-16">
+                                <p>Best medical equipment
+                                    used to diagnosis.</p>
+                            </div>
+                            <div class="mt-30">
+                                <a href="#" class="btn-secondary btn-white">
+                                    Appointment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <img src="../assets/images/svg/cardiology.svg" alt="">
+                        </div>
+                        <div class="title-primary title-semiblack font-700 mt-20">
+                            <h5>Cardiology</h5>
+                        </div>
+                        <div class="content big content-gray mt-16">
+                            <p>We have a team of expert
+                                cardiology doctor.</p>
+                        </div>
+                        <div class="overlay-card">
+                            <div class="title-primary title-semiblack font-700">
+                                <h5>Cardiology</h5>
+                            </div>
+                            <div class="content big content-white mt-16">
+                                <p>Best medical equipment
+                                    used to diagnosis.</p>
+                            </div>
+                            <div class="mt-30">
+                                <a href="#" class="btn-secondary btn-white">
+                                    Appointment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <img src="../assets/images/svg/medicine.svg" alt="">
+                        </div>
+                        <div class="title-primary title-semiblack font-700 mt-20">
+                            <h5>Medicine</h5>
+                        </div>
+                        <div class="content big content-gray mt-16">
+                            <p>Sepcialist pharmasist
+                                suggest best medicine</p>
+                        </div>
+                        <div class="overlay-card">
+                            <div class="title-primary title-semiblack font-700">
+                                <h5>Medicine</h5>
+                            </div>
+                            <div class="content big content-white mt-16">
+                                <p>Best medical equipment
+                                    used to diagnosis.</p>
+                            </div>
+                            <div class="mt-30">
+                                <a href="#" class="btn-secondary btn-white">
+                                    Appointment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <img src="../assets/images/svg/nuerology.svg" alt="">
+                        </div>
+                        <div class="title-primary title-semiblack font-700 mt-20">
+                            <h5>Neurology</h5>
+                        </div>
+                        <div class="content big content-gray mt-16">
+                            <p>We have a team of expert
+                                specialist doctor.</p>
+                        </div>
+                        <div class="overlay-card">
+                            <div class="title-primary title-semiblack font-700">
+                                <h5>Neurology</h5>
+                            </div>
+                            <div class="content big content-white mt-16">
+                                <p>Best medical equipment
+                                    used to diagnosis.</p>
+                            </div>
+                            <div class="mt-30">
+                                <a href="#" class="btn-secondary btn-white">
+                                    Appointment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <img src="../assets/images/svg/ambulance.svg" alt="">
+                        </div>
+                        <div class="title-primary title-semiblack font-700 mt-20">
+                            <h5>Ambulence</h5>
+                        </div>
+                        <div class="content big content-gray mt-16">
+                            <p>24/7 emergency service
+                                just call us.</p>
+                        </div>
+                        <div class="overlay-card">
+                            <div class="title-primary title-semiblack font-700">
+                                <h5>Ambulence</h5>
+                            </div>
+                            <div class="content big content-white mt-16">
+                                <p>Best medical equipment
+                                    used to diagnosis.</p>
+                            </div>
+                            <div class="mt-30">
+                                <a href="#" class="btn-secondary btn-white">
+                                    Appointment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ============================================================ APPOINTMENT SECTION ============================================================ -->
+
+        <section class="appointment-section pb-100 mdscreen:pb-40 smscreen:pb-30 relative w-full">
+            <div class="container-fluid relative z-40">
+                <div class="w-full grid grid-cols-3 576screen:grid-cols-1 gap-8 py-60">
+                    <div class="flex flex-col items-center">
+                        <div class="img">
+                            <img src="../assets/images/svg/smiley.svg" alt="">
+                        </div>
+                        <div class="title-primary title-white font-700 mt-20 lgscreen:mt-15 mdscreen:mt-10">
+                            <h3>30,00,000+</h3>
+                        </div>
+                        <div class="content big content-white mt-20 lgscreen:mt-15 mdscreen:mt-10 text-center">
+                            <p>Happy patients</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="img">
+                            <img src="../assets/images/png/doctor-count.png" alt="">
+                        </div>
+                        <div class="title-primary title-white font-700 mt-20 lgscreen:mt-15 mdscreen:mt-10">
+                            <h3>409+</h3>
+                        </div>
+                        <div class="content big content-white mt-20 lgscreen:mt-15 mdscreen:mt-10 text-center">
+                            <p>Experienced doctors</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="img">
+                            <img src="../assets/images/svg/calendar.svg" alt="">
+                        </div>
+                        <div class="title-primary title-white font-700 mt-20 lgscreen:mt-15 mdscreen:mt-10">
+                            <h3>18+</h3>
+                        </div>
+                        <div class="content big content-white mt-20 lgscreen:mt-15 mdscreen:mt-10 text-center">
+                            <p>Years of experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="zigzag-content bg-White w-full rounded-16 flex drop-shadow-appointmentcard max-h-[587px]">
+                    <div class="left-section w-9/12 lgscreen:w-full py-48 px-52 mdscreen:px-40 smscreen:px-30">
+                        <div class="pre-heading">
+                            <span>Need consultation?</span>
+                        </div>
+                        <div class="title-primary title-semiblack font-600 mt-22">
+                            <h2>Book an appointment</h2>
+                        </div>
+                        <div class="grid grid-cols-2 mdscreen:grid-cols-1 gap-[45px] mt-36">
+                            <div class="flex items-center gap-[13px]">
+                                <div>
+                                    <img src="../assets/images/svg/user-gray.svg" alt="">
+                                </div>
+                                <div class="flex flex-col w-full">
+                                    <div class="title-primary title-semiblack font-700">
+                                        <h5>Name</h5>
+                                    </div>
+                                    <div class="input w-full">
+                                        <input type="text" placeholder="Enter name here" class="w-full">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-[13px]">
+                                <div>
+                                    <img src="../assets/images/svg/mail.svg" alt="">
+                                </div>
+                                <div class="flex flex-col w-full">
+                                    <div class="title-primary title-semiblack font-700">
+                                        <h5>Email</h5>
+                                    </div>
+                                    <div class="input w-full">
+                                        <input type="email" placeholder="Enter email here" class="w-full">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-[13px]">
+                                <div>
+                                    <img src="../assets/images/svg/call-icon.svg" alt="">
+                                </div>
+                                <div class="flex flex-col w-full">
+                                    <div class="title-primary title-semiblack font-700">
+                                        <h5>Phone</h5>
+                                    </div>
+                                    <div class="input w-full">
+                                        <input type="tel" placeholder="Enter phone no. here" class="w-full">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-[13px]">
+                                <div>
+                                    <img src="../assets/images/svg/home.svg" alt="">
+                                </div>
+                                <div class="flex flex-col w-full">
+                                    <div class="title-primary title-semiblack font-700">
+                                        <h5>Service</h5>
+                                    </div>
+                                    <div class="input w-full custom-select">
+                                        <select class="w-full appearance-none">
+                                            <option value="" disabled selected>Select service</option>
+                                            <option value="service1">Service 1</option>
+                                            <option value="service2">Service 2</option>
+                                            <option value="service3">Service 3</option>
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-section w-3/12 lgscreen:hidden relative">
+                        <div class="doctor-img-two w-full h-full overflow-hidden">
+                            <img src="../assets/images/png/doctor-two.png" class="object-cover w-full h-full rounded-tr-16 rounded-br-16" alt="">
+                        </div>
+                        <div class="absolute top-50per translate-y-minus_50 left-50per translate-x-minus_50 z-50 flex flex-col items-center">
+                            <div class="capsule">
+                                <img src="../assets/images/svg/capsule.svg" alt="">
+                            </div>
+                            <div class="title-primary title-white mt-16 font-700">
+                                <h4>Medifine</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    .container-fluid {
+        @apply px-70 xlscreen:px-55 lgscreen:px-40 mdscreen:px-30 smscreen:px-20;
+    }
+   
+
+  /* ======================================================= TITLE ======================================================= */
+
+    h1,
+    .h1{
+        @apply text-68 leading-88
+          xlscreen:text-52 xlscreen:leading-60
+            lgscreen:text-40 lgscreen:leading-43
+              mdscreen:text-36 mdscreen:leading-40
+                smscreen:text-32 smscreen:leading-38
+    }
+    h2,
+    .h2{
+        @apply text-50 leading-64
+          xlscreen:text-42 xlscreen:leading-50
+            lgscreen:text-38 lgscreen:leading-40
+              mdscreen:text-32 mdscreen:leading-36
+                smscreen:text-28 smscreen:leading-32
+    }
+    h3,
+    .h3{
+        @apply text-38 leading-50
+          xlscreen:text-32 xlscreen:leading-36
+            lgscreen:text-30 lgscreen:leading-32
+              mdscreen:text-24 mdscreen:leading-28
+                smscreen:text-20 smscreen:leading-24
+    }
+    h4,
+    .h4{
+        @apply text-28 leading-38
+    }
+    h5,
+    .h5{
+        @apply text-22 leading-28
+    }
+
+  /* ======================================================= FONT FAMILY ======================================================= */
+     
+    .title-primary{
+        @apply font-ibm tracking-[1px]
+    }
+
+  /* ======================================================= COLORS ======================================================= */
+
+    .title-white,
+    .content-white{
+        @apply text-White
+    }
+    .title-green-light,
+    .content-green-light{
+        @apply text-green-100
+    }
+    .title-green-dark,
+    .content-green-dark{
+        @apply text-green-200
+    }
+    .title-semiblack,
+    .content-semiblack{
+        @apply text-semiblack
+    }
+    .title-gray,
+    .content-gray{
+        @apply text-gray
+    }
+    .title-semigray,
+    .content-semigray{
+        @apply text-semigray
+    }
+    .title-black,
+    .content-black{
+        @apply text-black
+    }
+    
+  /* ======================================================= CONTENT ======================================================= */
+    .content p {
+        @apply mt-5 font-ibm text-16 leading-20 tracking-[1px]
+    }
+    .content.big p{
+      @apply text-22 leading-28 tracking-[1px]
+        mdscreen:text-16 mdscreen:leading-20 
+    }
+
+    .content p:first-child {
+        @apply mt-0;
+    }
+
+  /* ======================================================= CONTENT ======================================================= */
+    
+    .pre-heading span{
+      @apply text-semiorange font-ibm text-22 leading-28 tracking-[1px]
+        mdscreen:text-16 mdscreen:leading-20 font-700
+    }
+
+
+}
+
+@layer components{
+  /* ======================================================= BUTTON ======================================================= */
+  .btn-primary{
+    @apply rounded-48 tracking-[1px] block drop-shadow-buttonshadow
+      py-25 px-42 text-28 leading-36
+        xlscreen:py-20 xlscreen:px-35 xlscreen:text-22 xlscreen:leading-24
+          lgscreen:py-16 lgscreen:px-28 lgscreen:text-20 lgscreen:leading-content
+            smscreen:text-16 smscreen:leading-20
+  }
+  .btn-secondary{
+    @apply rounded-4 py-15 px-30 text-16 leading-20 tracking-[1px] block
+  }
+  .btn-green{
+    @apply bg-green-100 text-White border-1 border-green-100 transition-all ease-out duration-300
+  }
+  .btn-green:hover{
+    @apply bg-transparent border-1 border-green-100 text-green-100 transition-all ease-out duration-300
+  }
+  .btn-white{
+    @apply bg-White text-green-100 border-1 border-White transition-all ease-out duration-300
+  }
+  .btn-white:hover{
+    @apply bg-transparent border-1 border-White text-White transition-all ease-out duration-300
+  }
+  
+  /* ======================================================= INPUT ======================================================= */
+  
+  input,
+  select{
+    @apply border-b-1 border-b-green-200 placeholder:text-semigray text-16 leading-20 font-500 px-5 py-10 focus-visible:outline-none
+  }
+  .custom-select{
+    @apply relative
+  }
+  .custom-select::before{
+    /* @apply  */
+  }
+
+  /* ======================================================= ANCHOR LINK ======================================================= */
+
+  .anchor-link{
+    @apply flex items-center text-green-100 tracking-[1px] font-700
+      text-28 leading-36
+        mdscreen:text-16 mdscreen:leading-20
+  }
+
+  /* ======================================================= HEADER ======================================================= */
+  .nav-link{
+    @apply py-6 px-16 font-ibm font-700 text-16 leading-20 text-semiblack transition-all ease-out duration-300 capitalize tracking-[1px]
+  }
+  .nav-link:hover{
+    @apply text-green-100 transition-all ease-out duration-300
+  }
+  .sidebar .nav-link{
+    @apply text-32
+  }
+
+  .is-sticky {
+    animation: headerStickyAnimation 0.5s ease-in-out;
+    @apply fixed top-0 left-0 w-full z-[50] transition-all duration-500 bg-White shadow-md;
+  }
+
+  @keyframes headerStickyAnimation {
+    0% {
+      opacity: 0.5;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .divider{
+    @apply max-w-[357px] mdscreen:max-w-[200px] smscreen:max-w-[175px] h-[1px] bg-semiorange mx-auto my-32
+  }
+}
+
+@layer utilities{
+    .hero-section{
+        @apply relative z-20
+    }
+    .hero-section::before{
+        @apply content-[''] absolute top-0 left-0 w-full h-full bg-[url('../../images/png/herobanneroverlay.png')] bg-contain bg-no-repeat z-0
+    }
+
+    .banner-content .content-box{
+      @apply relative
+    }
+    .banner-content .content-box::before{
+      @apply content-[""] absolute -top-[25px] left-0 w-[25px] h-[25px] bg-[url('../../images/svg/rectangle-green.svg')] bg-contain bg-no-repeat z-0 mdscreen:hidden
+    }
+    .banner-content .content-box::after{
+      @apply content-[""] absolute -bottom-[35px] right-0 w-[25px] h-[25px] bg-[url('../../images/svg/rectangle-orange.svg')] bg-contain bg-no-repeat z-0 mdscreen:hidden
+    }
+
+    .banner-right-section{
+      @apply relative z-20
+    }
+    .banner-right-section::before{
+      @apply content-[""] absolute bottom-0 right-0 w-full max-w-[679px] h-full max-h-[683px] mdscreen:max-h-[unset] bg-[url('../../images/png/circles.png')] bg-contain bg-no-repeat z-[-1] bg-bottom
+    }
+
+    .video-section{
+      @apply relative z-10 h-[528px] smscreen:h-[400px]
+    }
+    .video-section::before{
+      @apply content-[''] absolute -top-[28px] -left-[28px] w-[160px] h-[160px] bg-[url('../../images/png/green-box.png')] z-[-1] mdscreen:hidden
+    }
+
+    .whoweare-section{
+      @apply relative z-10
+    }
+    .whoweare-section::before{
+      @apply content-[''] absolute top-50per translate-y-minus_50 right-0 w-full h-full max-w-[368px] max-h-[460px] bg-[url('../../images/png/plus-guard.png')] bg-contain bg-no-repeat z-[-1] opacity-15 mdscreen:hidden
+    }
+
+    .service-card{
+      @apply bg-White rounded-16 drop-shadow-cardshadow px-28 py-35 flex flex-col items-center text-center cursor-pointer relative overflow-hidden
+    }
+    .overlay-card{
+      @apply absolute top-[101%] left-0 w-full h-full bg-green-200 rounded-16 z-0 transition-all ease-out duration-300 flex flex-col items-center text-center px-28 py-35
+    }
+    .service-card:hover .overlay-card {
+      @apply top-0 z-40 transition-all ease-out duration-300
+    }
+  
+    .appointment-section{
+      @apply relative
+    }
+    .appointment-section::before{
+      @apply content-[""] absolute top-0 left-0 w-full h-full bg-cover bg-[url('../../images/png/hand-background.png')] max-h-[600px] xlscreen:max-h-[580px] lgscreen:max-h-[570px] mdscreen:max-h-[540px] 576screen:max-h-[857px]  
+    }
+    .appointment-section::after{
+      @apply content-[""] absolute top-0 left-0 w-full h-full bg-cover bg-green-100/85 z-10 max-h-[600px] xlscreen:max-h-[580px] lgscreen:max-h-[570px] mdscreen:max-h-[540px] 576screen:max-h-[857px] 
+    }
+    .doctor-img-two{
+      @apply relative z-40
+    }
+    .doctor-img-two::before{
+      @apply content-[''] absolute top-0 left-0 w-full h-full bg-cover bg-semiorange bg-opacity-85 rounded-tr-16 rounded-br-16
+    }
+    .capsule{
+      @apply bg-green-100 p-16 rounded-100per max-w-[64px] max-h-[64px] flex justify-center
+    }
+}
