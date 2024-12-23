@@ -22,6 +22,25 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const sectionanim = gsap.utils.toArray('.fade-in');
+sectionanim.forEach((box) => {
+  gsap.fromTo(box, 
+    { autoAlpha: 0,y:30 }, 
+    { 
+      duration: 1, 
+      y:0,
+      autoAlpha: 1,
+      scrollTrigger: {
+        trigger: box,
+        start: 'top 80%',  
+        end: 'top 50%',    
+        toggleActions: 'play none none none',
+        once: true
+      }
+    }
+  );
+});
+
 jQuery(document).ready(function ($) {
     if ($(window).scrollTop() >= 70) {
         $(".header").addClass("is-sticky");

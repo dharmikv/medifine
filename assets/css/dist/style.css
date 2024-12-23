@@ -794,6 +794,15 @@ h5,
   margin-top: 0px;
 }
 
+.contact-numbers a:hover{
+  --tw-text-opacity: 1;
+  color: rgb(32 188 126 / var(--tw-text-opacity, 1));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
 /* ======================================================= CONTENT ======================================================= */
 
 .pre-heading span{
@@ -1901,10 +1910,6 @@ footer .nav-link{
     width: auto;
   }
 
-  .xlscreen\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .xlscreen\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1933,10 +1938,6 @@ footer .nav-link{
 
   .lgscreen\:w-full{
     width: 100%;
-  }
-
-  .lgscreen\:grid-cols-2{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lgscreen\:grid-cols-3{
@@ -2104,10 +2105,6 @@ footer .nav-link{
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .smscreen\:items-center{
-    align-items: center;
-  }
-
   .smscreen\:px-30{
     padding-left: 30px;
     padding-right: 30px;
@@ -2121,17 +2118,9 @@ footer .nav-link{
   .smscreen\:pb-30{
     padding-bottom: 30px;
   }
-
-  .smscreen\:text-center{
-    text-align: center;
-  }
 }
 
 @media (max-width: 576px){
-  .\35 76screen\:col-span-1{
-    grid-column: span 1 / span 1;
-  }
-
   .\35 76screen\:w-auto{
     width: auto;
   }

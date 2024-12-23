@@ -96,7 +96,9 @@
     .content p:first-child {
         @apply mt-0;
     }
-
+    .contact-numbers a:hover{
+      @apply text-green-100 transition-all duration-300 ease-out
+    }
   /* ======================================================= CONTENT ======================================================= */
     
     .pre-heading span{
