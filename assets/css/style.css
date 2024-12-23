@@ -42,6 +42,8 @@
     h5,
     .h5{
         @apply text-22 leading-28
+          xlscreen:text-20 xlscreen:leading-content
+            lgscreen:text-16 lgscreen:leading-20
     }
 
   /* ======================================================= FONT FAMILY ======================================================= */
@@ -82,7 +84,8 @@
     }
     
   /* ======================================================= CONTENT ======================================================= */
-    .content p {
+    .content p,
+    .contact-numbers a{
         @apply mt-5 font-ibm text-16 leading-20 tracking-[1px]
     }
     .content.big p{
@@ -136,10 +139,7 @@
     @apply border-b-1 border-b-green-200 placeholder:text-semigray text-16 leading-20 font-500 px-5 py-10 focus-visible:outline-none
   }
   .custom-select{
-    @apply relative
-  }
-  .custom-select::before{
-    /* @apply  */
+    @apply text-semigray
   }
 
   /* ======================================================= ANCHOR LINK ======================================================= */
@@ -248,5 +248,16 @@
     }
     .capsule{
       @apply bg-green-100 p-16 rounded-100per max-w-[64px] max-h-[64px] flex justify-center
+    }
+    .appointment-section .btn-secondary{
+      @apply py-24 px-95 text-22 leading-28 capitalize
+        lgscreen:py-20 lgscreen:px-80 lgscreen:text-20 lgscreen:leading-24
+          mdscreen:py-16 mdscreen:px-50 mdscreen:text-16 mdscreen:leading-20
+    }
+    .email-form input{
+      @apply border-b-0
+    }
+    footer .nav-link{
+      @apply text-semigray font-500
     }
 }
